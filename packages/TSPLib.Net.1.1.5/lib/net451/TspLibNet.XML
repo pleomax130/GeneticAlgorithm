@@ -1,0 +1,2139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TspLibNet</name>
+    </assembly>
+    <members>
+        <member name="T:TspLibNet.DistanceFunctions.DistanceFunctionBase">
+            <summary>
+            Base distance function
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.DistanceFunctionBase.Distance(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.DistanceFunctionBase.Distance(TspLibNet.Graph.Nodes.Node2D,TspLibNet.Graph.Nodes.Node2D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.DistanceFunctionBase.Distance(TspLibNet.Graph.Nodes.Node3D,TspLibNet.Graph.Nodes.Node3D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="T:TspLibNet.DistanceFunctions.IDistanceFunction">
+            <summary>
+            Interface for a distance function
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.IDistanceFunction.Distance(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="T:TspLibNet.DistanceFunctions.Euclidean">
+            <summary>
+            Euclidean distance function
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.Euclidean.Distance(TspLibNet.Graph.Nodes.Node2D,TspLibNet.Graph.Nodes.Node2D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.Euclidean.Distance(TspLibNet.Graph.Nodes.Node3D,TspLibNet.Graph.Nodes.Node3D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="T:TspLibNet.DistanceFunctions.EuclideanCeiled">
+            <summary>
+            Euclidean ceiled distance function
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.EuclideanCeiled.Distance(TspLibNet.Graph.Nodes.Node2D,TspLibNet.Graph.Nodes.Node2D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.EuclideanCeiled.Distance(TspLibNet.Graph.Nodes.Node3D,TspLibNet.Graph.Nodes.Node3D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="T:TspLibNet.DistanceFunctions.Geographical">
+            <summary>
+            Geographical distance function
+            </summary>
+        </member>
+        <member name="F:TspLibNet.DistanceFunctions.Geographical.EarthSphereRadius">
+            <summary>
+            Approximate earth sphere radius in kilometers
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.Geographical.Distance(TspLibNet.Graph.Nodes.Node2D,TspLibNet.Graph.Nodes.Node2D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.Geographical.Distance(TspLibNet.Graph.Nodes.Node3D,TspLibNet.Graph.Nodes.Node3D)">
+            <summary>
+            No distance implementation possible for Geographical location in 3D
+            </summary>
+            <exception cref="T:System.NotSupportedException">Not supported</exception>
+        </member>
+        <member name="T:TspLibNet.DistanceFunctions.Manhattan">
+            <summary>
+            Manhattan distance function
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.Manhattan.Distance(TspLibNet.Graph.Nodes.Node2D,TspLibNet.Graph.Nodes.Node2D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.Manhattan.Distance(TspLibNet.Graph.Nodes.Node3D,TspLibNet.Graph.Nodes.Node3D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="T:TspLibNet.DistanceFunctions.Maximum">
+            <summary>
+            Maximum distance function
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.Maximum.Distance(TspLibNet.Graph.Nodes.Node2D,TspLibNet.Graph.Nodes.Node2D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.Maximum.Distance(TspLibNet.Graph.Nodes.Node3D,TspLibNet.Graph.Nodes.Node3D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="T:TspLibNet.DistanceFunctions.PseudoEuclidean">
+            <summary>
+            Pseudo Euclidean distance function
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.PseudoEuclidean.Distance(TspLibNet.Graph.Nodes.Node2D,TspLibNet.Graph.Nodes.Node2D)">
+            <summary>
+            Gets distance from node A to node B
+            </summary>
+            <param name="a">node A</param>
+            <param name="b">node B</param>
+            <returns>Distance between node A and node B</returns>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.PseudoEuclidean.Distance(TspLibNet.Graph.Nodes.Node3D,TspLibNet.Graph.Nodes.Node3D)">
+            <summary>
+            No distance implementation possible for PseudoEuclidean in 3D
+            </summary>
+            <exception cref="T:System.NotSupportedException">Not supported</exception>
+        </member>
+        <member name="T:TspLibNet.DistanceFunctions.GeoLocation">
+            <summary>
+            Geographical location representation
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.GeoLocation.#ctor(System.Double,System.Double)">
+            <summary>
+            Creates a new instance of geographical location
+            </summary>
+            <param name="latitude">location latitude</param>
+            <param name="longitude">location longitude</param>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.GeoLocation.#ctor(TspLibNet.Graph.Nodes.Node2D)">
+            <summary>
+            Creates a new instance of geographical location from 2D node
+            </summary>
+            <param name="node">node to convert to geo location</param>
+        </member>
+        <member name="P:TspLibNet.DistanceFunctions.GeoLocation.Latitude">
+            <summary>
+            Gets location latitude
+            </summary>
+        </member>
+        <member name="P:TspLibNet.DistanceFunctions.GeoLocation.Longitude">
+            <summary>
+            Gets location longitude
+            </summary>
+        </member>
+        <member name="M:TspLibNet.DistanceFunctions.GeoLocation.CalcGeoValue(System.Double)">
+            <summary>
+            Converts 2D space value into geographical location value
+            </summary>
+            <param name="value">value to convert</param>
+            <returns>converted value</returns>
+        </member>
+        <member name="T:TspLibNet.Exceptions.TourInvalidException">
+            <summary>
+            Exception thrown when tour is not valid
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Exceptions.TourInvalidException.#ctor">
+            <summary>
+            Creates a new instance of a TourInvalidException class.
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Exceptions.TourInvalidException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of a TourInvalidException class.
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:TspLibNet.Exceptions.TourInvalidException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of a TourInvalidException class.
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="innerException">Inner exception</param>
+        </member>
+        <member name="T:TspLibNet.Exceptions.GraphException">
+            <summary>
+            Graph exception thrown when graph is not consistent
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Exceptions.GraphException.#ctor">
+            <summary>
+            Creates a new instance of a GraphException class.
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Exceptions.GraphException.#ctor(System.String)">
+            <summary>
+            Creates a new instance of a GraphException class.
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:TspLibNet.Exceptions.GraphException.#ctor(System.String,System.Exception)">
+            <summary>
+            Creates a new instance of a GraphException class.
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="innerException">Inner exception</param>
+        </member>
+        <member name="T:TspLibNet.Graph.Demand.DictionaryBasedDemandProvider">
+            <summary>
+            Provides demand values basing on a provided lokup dictionary
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Demand.DictionaryBasedDemandProvider.#ctor(System.Collections.Generic.Dictionary{TspLibNet.Graph.Nodes.INode,System.Int32})">
+            <summary>
+            Creates a new instance of DictionaryBasedDemandProvider class.
+            </summary>
+            <param name="demandDictionary">Lookup dictionary with a demands</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Demand.DictionaryBasedDemandProvider.DemandDictionary">
+            <summary>
+            Gets or sets demand lookup dictionary
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Demand.DictionaryBasedDemandProvider.GetDemand(TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get demand for given node
+            </summary>
+            <returns>Value of demand on a given node</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Demand.IDemandProvider">
+            <summary>
+            Interface for providing graph nodes demands
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Demand.IDemandProvider.GetDemand(TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get demand for given node
+            </summary>
+            <returns>Value of demand on a given node</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Depots.IDepotsProvider">
+            <summary>
+            Interface for providing graph depot nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Depots.IDepotsProvider.GetDepots">
+            <summary>
+            Get all depot nodes in graph
+            </summary>
+            <returns>List of nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Depots.IDepotsProvider.CountDepots">
+            <summary>
+            Get total number of depots
+            </summary>
+            <returns>Total number of depots</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Depots.NodeListBasedDepotProvider">
+            <summary>
+            Provides depot nodes by extracting them directly from a list of depot nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Depots.NodeListBasedDepotProvider.#ctor(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Creates new instance of NodeListBasedDepotProvider
+            </summary>
+            <param name="nodes">list of depot nodes initializing provider</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Depots.NodeListBasedDepotProvider.Nodes">
+            <summary>
+            Gets or sets providers nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Depots.NodeListBasedDepotProvider.GetDepots">
+            <summary>
+            Get all depot nodes in graph
+            </summary>
+            <returns>List of nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Depots.NodeListBasedDepotProvider.CountDepots">
+            <summary>
+            Get total number of depots
+            </summary>
+            <returns>Total number of depots</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Edges.Edge">
+            <summary>
+            Graph edge class, first node have always lower id than the second node
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.Edge.#ctor(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Creates new instance of graph edge
+            </summary>
+            <param name="first">Edge first node</param>
+            <param name="second">Edge second node</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Edges.Edge.First">
+            <summary>
+            Gets first edge node
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Edges.Edge.Second">
+            <summary>
+            Gets second edge node
+            </summary>
+        </member>
+        <member name="T:TspLibNet.Graph.Edges.EdgeListBasedEdgeProvider">
+            <summary>
+            Provides edge basing on a list of edges
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.EdgeListBasedEdgeProvider.#ctor(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Edges.IEdge})">
+            <summary>
+            Creates new instance of a EdgeListBasedEdgeProvider class.
+            </summary>
+            <param name="edges">list of edges</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Edges.EdgeListBasedEdgeProvider.Edges">
+            <summary>
+            Gets or sets collection of fixed edges
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.EdgeListBasedEdgeProvider.GetEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get edge between given nodes
+            </summary>
+            <param name="first">first node to check</param>
+            <param name="second">second node to check</param>
+            <returns>Edge between given nodes or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.EdgeListBasedEdgeProvider.HasEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Checks if there is edge between given nodes
+            </summary>
+            <param name="first">first node to check</param>
+            <param name="second">second node to check</param>
+            <returns>Indicates if there is an edge between given nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.EdgeListBasedEdgeProvider.CountEdges">
+            <summary>
+            Get total number of edges
+            </summary>
+            <returns>Total number of edges</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Edges.IEdgeProvider">
+            <summary>
+            Interface for providing graph edges
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.IEdgeProvider.GetEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get edge between given nodes
+            </summary>
+            <param name="first">first node to check</param>
+            <param name="second">second node to check</param>
+            <returns>Edge between given nodes or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.IEdgeProvider.HasEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Checks if there is edge between given nodes
+            </summary>
+            <param name="first">first node to check</param>
+            <param name="second">second node to check</param>
+            <returns>Indicates if there is an edge between given nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.IEdgeProvider.CountEdges">
+            <summary>
+            Get total number of edges
+            </summary>
+            <returns>Total number of edges</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProvider">
+            <summary>
+            Provides edges by looking up edge weight matrix
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProvider.#ctor(System.Double[0:,0:])">
+            <summary>
+            Creates a new instance of a WeightMatrixBasedEdgeProvider class
+            </summary>
+            <param name="matrix">weight matrix initializing edge provider</param>
+        </member>
+        <member name="T:TspLibNet.Graph.Edges.NodeBasedEdgeProvider">
+            <summary>
+            Provides graph edges by deriving them from a list of nodes (for complete graphs)
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.NodeBasedEdgeProvider.#ctor(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Creates a new instance of class NodeBasedEdgeProvider
+            </summary>
+            <param name="nodes">list of graph nodes</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Edges.NodeBasedEdgeProvider.Nodes">
+            <summary>
+            Gets or sets collection of fixed edges
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.NodeBasedEdgeProvider.GetEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get edge between given nodes
+            </summary>
+            <param name="first">first node to check</param>
+            <param name="second">second node to check</param>
+            <returns>Edge between given nodes or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.NodeBasedEdgeProvider.HasEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Checks if there is edge between given nodes
+            </summary>
+            <param name="first">first node to check</param>
+            <param name="second">second node to check</param>
+            <returns>Indicates if there is an edge between given nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.NodeBasedEdgeProvider.CountEdges">
+            <summary>
+            Get total number of edges
+            </summary>
+            <returns>Total number of edges</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProviderWithExclusions">
+            <summary>
+            Provides edges by looking up edge weight matrix, weights from exclusion list are treated as a lack of edge
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProviderWithExclusions.#ctor(System.Double[0:,0:],System.Collections.Generic.IEnumerable{System.Double})">
+            <summary>
+            Creates a new instance of a WeightMatrixBasedEdgeProviderWithExclusions class
+            </summary>
+            <param name="matrix">weight matrix initializing edge provider</param>
+            <param name="exclusions">weights exclusions</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProviderWithExclusions.WeightsMatrix">
+            <summary>
+            Gets or sets collection of fixed edges
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProviderWithExclusions.Exclusions">
+            <summary>
+            Gets or sets list of weight exclusions
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProviderWithExclusions.GetEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get edge between given nodes
+            </summary>
+            <param name="first">first node to check</param>
+            <param name="second">second node to check</param>
+            <returns>Edge between given nodes or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProviderWithExclusions.HasEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Checks if there is edge between given nodes
+            </summary>
+            <param name="first">first node to check</param>
+            <param name="second">second node to check</param>
+            <returns>Indicates if there is an edge between given nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.WeightMatrixBasedEdgeProviderWithExclusions.CountEdges">
+            <summary>
+            Get total number of edges
+            </summary>
+            <returns>Total number of edges</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Edges.EdgesCollection">
+            <summary>
+            Strongly typed edges collection
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.EdgesCollection.#ctor">
+            <summary>
+            Creates new instance of EdgesCollection
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.EdgesCollection.#ctor(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Edges.IEdge})">
+            <summary>
+            Creates new instance of EdgesCollection
+            </summary>
+            <param name="edges">range of edges to add initially</param>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.EdgesCollection.FindEdge(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Find edge by given pair of nodes
+            </summary>
+            <param name="first">edge first node</param>
+            <param name="second">edge second node</param>
+            <returns>edge on given pair of nodes or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Edges.EdgesCollection.FilterByNode(TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Find edge with given node
+            </summary>
+            <param name="node">The node to filter edges by</param>
+            <returns>Node with given id or null</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Edges.IEdge">
+            <summary>
+            Interface for edge representation
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Edges.IEdge.First">
+            <summary>
+            Gets first edge node
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Edges.IEdge.Second">
+            <summary>
+            Gets second edge node
+            </summary>
+        </member>
+        <member name="T:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProviderWithCaching">
+            <summary>
+            Weight provider based on distance function that is able to cache deistances get from distance function for reuse
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProviderWithCaching.#ctor(TspLibNet.DistanceFunctions.IDistanceFunction)">
+            <summary>
+            Creates new instance of a function based weight provider
+            </summary>
+            <param name="distanceFunction">distance function to be used</param>
+        </member>
+        <member name="P:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProviderWithCaching.DistancesCache">
+            <summary>
+            Gets or sets distances cache
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProviderWithCaching.DistanceFunction">
+            <summary>
+            Gets or sets distance function in use
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProviderWithCaching.GetWeight(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get weight for given edge
+            </summary>
+            <param name="first">first node of edge</param>
+            <param name="second">second node of edge</param>
+            <returns>Weight of a given edge</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.EdgeWeights.NodeAdjacencyBasedWeightProvider">
+            <summary>
+            Hamiltonian Cycle Weight Provider
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.NodeAdjacencyBasedWeightProvider.#ctor(TspLibNet.Graph.Edges.IEdgeProvider,System.Double,System.Double)">
+            <summary>
+            Creates new instance of a node adjacency based weight provider
+            </summary>
+            <param name="edgeProvider">distance function to be used</param>
+            <param name="adjacentWeight">weight for adjacent nodes</param>
+            <param name="nonAdjacentWeight">weight for non-adjacent nodes</param>
+        </member>
+        <member name="P:TspLibNet.Graph.EdgeWeights.NodeAdjacencyBasedWeightProvider.EdgeProvider">
+            <summary>
+            Gets or sets distance function in use
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.EdgeWeights.NodeAdjacencyBasedWeightProvider.AdjacentWeight">
+            <summary>
+            Gets or sets weight when nodes are adjacent
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.EdgeWeights.NodeAdjacencyBasedWeightProvider.NotAdjacentWeight">
+            <summary>
+            Gets or sets weight when nodes are not adjacent
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.NodeAdjacencyBasedWeightProvider.GetWeight(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get weight for given edge
+            </summary>
+            <param name="first">first node of edge</param>
+            <param name="second">second node of edge</param>
+            <returns>Weight of a given edge</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.EdgeWeights.IEdgeWeightsProvider">
+            <summary>
+            Interface for providing an edge weights
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.IEdgeWeightsProvider.GetWeight(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get weight for given edge
+            </summary>
+            <param name="first">first node of edge</param>
+            <param name="second">second node of edge</param>
+            <returns>Weight of a given edge</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProvider">
+            <summary>
+            Weight provider based on distance function
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProvider.#ctor(TspLibNet.DistanceFunctions.IDistanceFunction)">
+            <summary>
+            Creates new instance of a function based weight provider
+            </summary>
+            <param name="distanceFunction">distance function to be used</param>
+        </member>
+        <member name="P:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProvider.DistanceFunction">
+            <summary>
+            Gets or sets distance function in use
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.FunctionBasedWeightProvider.GetWeight(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get weight for given edge
+            </summary>
+            <param name="first">first node of edge</param>
+            <param name="second">second node of edge</param>
+            <returns>Weight of a given edge</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.EdgeWeights.MatrixBasedWeightProvider">
+            <summary>
+            Weight provider based on weight matrix
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.MatrixBasedWeightProvider.#ctor(System.Double[0:,0:])">
+            <summary>
+            Creates new instance of matrix based weight provider
+            </summary>
+            <param name="weights">matrix with weights</param>
+        </member>
+        <member name="P:TspLibNet.Graph.EdgeWeights.MatrixBasedWeightProvider.Weights">
+            <summary>
+            Gets or sets weights matrix
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.MatrixBasedWeightProvider.GetWeight(TspLibNet.Graph.Nodes.INode,TspLibNet.Graph.Nodes.INode)">
+            <summary>
+            Get weight for given edge
+            </summary>
+            <param name="first">first node of edge</param>
+            <param name="second">second node of edge</param>
+            <returns>Weight of a given edge</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.EdgeWeights.MatrixBuilder">
+            <summary>
+            Weight matrix builder
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.MatrixBuilder.BuildFromFullMatrix(System.Collections.Generic.IEnumerable{System.Double},System.Int32)">
+            <summary>
+            Weights are given by a full matrix
+            </summary>
+            <param name="data">matrix data</param>
+            <param name="dimension">matrix dimension</param>
+            <returns>matrixed filed with data</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.MatrixBuilder.BuildFromUpperRow(System.Collections.Generic.IEnumerable{System.Double},System.Int32)">
+            <summary>
+            Upper triangular matrix, row-wise without diagonal entries
+            </summary>
+            <param name="data">matrix data</param>
+            <param name="dimension">matrix dimension</param>
+            <returns>matrixed filed with data</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.MatrixBuilder.BuildFromLowerRow(System.Collections.Generic.IEnumerable{System.Double},System.Int32)">
+            <summary>
+            Lower triangular matrix, row-wise without diagonal entries
+            </summary>
+            <param name="data">matrix data</param>
+            <param name="dimension">matrix dimension</param>
+            <returns>matrixed filed with data</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.MatrixBuilder.BuildFromUpperDiagonalRow(System.Collections.Generic.IEnumerable{System.Double},System.Int32)">
+            <summary>
+            Upper triangular matrix, row-wise including diagonal entries
+            </summary>
+            <param name="data">matrix data</param>
+            <param name="dimension">matrix dimension</param>
+            <returns>matrixed filed with data</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.EdgeWeights.MatrixBuilder.BuildFromLowerDiagonalRow(System.Collections.Generic.IEnumerable{System.Double},System.Int32)">
+            <summary>
+            Lower triangular matrix, row-wise including diagonal entries
+            </summary>
+            <param name="data">matrix data</param>
+            <param name="dimension">matrix dimension</param>
+            <returns>matrixed filed with data</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.FixedEdges.EdgeListBasedFixedEdgesProvider">
+            <summary>
+            Provides fixed edges basing on a given list of edges
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.FixedEdges.EdgeListBasedFixedEdgesProvider.#ctor(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Edges.IEdge})">
+            <summary>
+            Creates new instance of a EdgeListBasedFixedEdgesProvider class.
+            </summary>
+            <param name="fixedEdges">list of fixed edges</param>
+        </member>
+        <member name="P:TspLibNet.Graph.FixedEdges.EdgeListBasedFixedEdgesProvider.FixedEdges">
+            <summary>
+            Gets or sets collection of fixed edges
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.FixedEdges.EdgeListBasedFixedEdgesProvider.GetFixedEdges">
+            <summary>
+            Get fixed edges in given graph
+            </summary>
+            <returns>List of fixed edges</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.FixedEdges.EdgeListBasedFixedEdgesProvider.CountFixedEdges">
+            <summary>
+            Get number of fixed edges in given graph
+            </summary>
+            <returns>Number of fixed edges</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.FixedEdges.IFixedEdgesProvider">
+            <summary>
+            Interface for providing fixed edges, edges that must be a part of a solution
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.FixedEdges.IFixedEdgesProvider.GetFixedEdges">
+            <summary>
+            Get fixed edges in given graph
+            </summary>
+            <returns>List of fixed edges</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.FixedEdges.IFixedEdgesProvider.CountFixedEdges">
+            <summary>
+            Get number of fixed edges in given graph
+            </summary>
+            <returns>Number of fixed edges</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.EdgeListBasedNodeProvider">
+            <summary>
+            Provides nodes by extracting them from given list of graph edges
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.EdgeListBasedNodeProvider.#ctor(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Edges.IEdge})">
+            <summary>
+            Creates new instance of EdgeListBasedNodeProvider
+            </summary>
+            <param name="edges">edge list initializing provider</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.EdgeListBasedNodeProvider.Nodes">
+            <summary>
+            Gets or sets providers nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.EdgeListBasedNodeProvider.GetNodes">
+            <summary>
+            Get all nodes in graph
+            </summary>
+            <returns>List of nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.EdgeListBasedNodeProvider.GetNode(System.Int32)">
+            <summary>
+            Get node with a given id
+            </summary>
+            <param name="id">node id</param>
+            <returns>Node with a given id or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.EdgeListBasedNodeProvider.CountNodes">
+            <summary>
+            Get total number of nodes
+            </summary>
+            <returns>Total number of nodes</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.INodeProvider">
+            <summary>
+            Interface for providing graph nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.INodeProvider.GetNodes">
+            <summary>
+            Get all nodes in graph
+            </summary>
+            <returns>List of nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.INodeProvider.GetNode(System.Int32)">
+            <summary>
+            Get node with a given id
+            </summary>
+            <param name="id">node id</param>
+            <returns>Node with a given id or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.INodeProvider.CountNodes">
+            <summary>
+            Get total number of nodes
+            </summary>
+            <returns>Total number of nodes</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.DimensionBasedNodeProvider">
+            <summary>
+            Provides nodes by generating them accordingly to a problem dimension
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.DimensionBasedNodeProvider.#ctor(System.Int32)">
+            <summary>
+            Creates new instance of DimensionBasedNodeProvider
+            </summary>
+            <param name="dimension">dimension of problem initializing provider</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.DimensionBasedNodeProvider.Nodes">
+            <summary>
+            Gets or sets providers nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.DimensionBasedNodeProvider.GetNodes">
+            <summary>
+            Get all nodes in graph
+            </summary>
+            <returns>List of nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.DimensionBasedNodeProvider.GetNode(System.Int32)">
+            <summary>
+            Get node with a given id
+            </summary>
+            <param name="id">node id</param>
+            <returns>Node with a given id or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.DimensionBasedNodeProvider.CountNodes">
+            <summary>
+            Get total number of nodes
+            </summary>
+            <returns>Total number of nodes</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.NodeListBasedNodeProvider">
+            <summary>
+            Provides nodes by extracting them directly from a list of graph nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.NodeListBasedNodeProvider.#ctor(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Creates new instance of NodeListBasedNodeProvider
+            </summary>
+            <param name="nodes">list of nodes initializing provider</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.NodeListBasedNodeProvider.Nodes">
+            <summary>
+            Gets or sets providers nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.NodeListBasedNodeProvider.GetNodes">
+            <summary>
+            Get all nodes in graph
+            </summary>
+            <returns>List of nodes</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.NodeListBasedNodeProvider.GetNode(System.Int32)">
+            <summary>
+            Get node with a given id
+            </summary>
+            <param name="id">node id</param>
+            <returns>Node with a given id or null</returns>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.NodeListBasedNodeProvider.CountNodes">
+            <summary>
+            Get total number of nodes
+            </summary>
+            <returns>Total number of nodes</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.Node">
+            <summary>
+            Represents graph node without any coordinates
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.Node.#ctor(System.Int32)">
+            <summary>
+            Creates a new instance of graph node
+            </summary>
+            <param name="id">node id</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.Node.Id">
+            <summary>
+            Gets node Id
+            </summary>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.NodesCollection">
+            <summary>
+            Strongly typed nodes collection
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.NodesCollection.#ctor">
+            <summary>
+            Creates new instance of NodesCollection
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.NodesCollection.#ctor(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Creates new instance of NodesCollection
+            </summary>
+            <param name="nodes">range of nodes to add initially</param>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.NodesCollection.FindById(System.Int32)">
+            <summary>
+            Find node by id
+            </summary>
+            <param name="id">node id</param>
+            <returns>node with given id or null</returns>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.INode">
+            <summary>
+            Interface for a graph node
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.INode.Id">
+            <summary>
+            Gets node Id
+            </summary>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.Node3D">
+            <summary>
+            Represents graph 3D node
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.Node3D.#ctor(System.Int32,System.Double,System.Double,System.Double)">
+            <summary>
+            Creates a new instance of graph node
+            </summary>
+            <param name="id">node id</param>
+            <param name="x">node x coordinate</param>
+            <param name="y">node y coordinate</param>
+            <param name="z">node z coordinate</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.Node3D.Id">
+            <summary>
+            Gets node Id
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.Node3D.X">
+            <summary>
+            Gets node X coordinate
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.Node3D.Y">
+            <summary>
+            Gets node Y coordinate
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.Node3D.Z">
+            <summary>
+            Gets node Z coordinate
+            </summary>
+        </member>
+        <member name="T:TspLibNet.Graph.Nodes.Node2D">
+            <summary>
+            Represents graph 2D node
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Graph.Nodes.Node2D.#ctor(System.Int32,System.Double,System.Double)">
+            <summary>
+            Creates a new instance of graph node
+            </summary>
+            <param name="id">node id</param>
+            <param name="x">node x coordinate</param>
+            <param name="y">node y coordinate</param>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.Node2D.Id">
+            <summary>
+            Gets node Id
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.Node2D.X">
+            <summary>
+            Gets node X coordinate
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Graph.Nodes.Node2D.Y">
+            <summary>
+            Gets node Y coordinate
+            </summary>
+        </member>
+        <member name="T:TspLibNet.ProblemType">
+            <summary>
+            Represents possible TSPLIB problem types.
+            </summary>
+        </member>
+        <member name="F:TspLibNet.ProblemType.TSP">
+            <summary> Symmetric TSP </summary>
+        </member>
+        <member name="F:TspLibNet.ProblemType.ATSP">
+            <summary> Aymmetric TSP </summary>
+        </member>
+        <member name="F:TspLibNet.ProblemType.HCP">
+            <summary> Hamiltonian Cycle Problem </summary>
+        </member>
+        <member name="F:TspLibNet.ProblemType.SOP">
+            <summary> Sequential Ordering Problem </summary>
+        </member>
+        <member name="F:TspLibNet.ProblemType.CVRP">
+            <summary> Capacitated Vehicle Routing Problem </summary>
+        </member>
+        <member name="T:TspLibNet.IProblem">
+            <summary>
+            Interface for a graph based problems
+            </summary>
+        </member>
+        <member name="P:TspLibNet.IProblem.Type">
+            <summary>
+            Represents the problem type (TSP, ATSP, etc).
+            </summary>
+        </member>
+        <member name="P:TspLibNet.IProblem.Name">
+            <summary>
+            Gets file name - Identifies the data file.
+            </summary>
+        </member>
+        <member name="P:TspLibNet.IProblem.Comment">
+            <summary>
+            Gets file comment - additional comments from problem author
+            </summary>
+        </member>
+        <member name="M:TspLibNet.IProblem.TourDistance(TspLibNet.Tours.ITour)">
+            <summary>
+            Gets tour distance for a given problem
+            </summary>
+            <param name="tour">Tour to check</param>
+            <returns>Tour distance</returns>
+        </member>
+        <member name="P:TspLibNet.IProblem.NodeProvider">
+            <summary>
+            Gets nodes provider
+            </summary>
+        </member>
+        <member name="P:TspLibNet.IProblem.EdgeProvider">
+            <summary>
+            Gets Edges provider
+            </summary>
+        </member>
+        <member name="P:TspLibNet.IProblem.EdgeWeightsProvider">
+            <summary>
+            Gets Edge Weights Provider
+            </summary>
+        </member>
+        <member name="P:TspLibNet.IProblem.FixedEdgesProvider">
+            <summary>
+            Gets Fixed Edges Provider
+            </summary>
+        </member>
+        <member name="T:TspLibNet.NodesFactory">
+            <summary>
+            Factory making nodes
+            </summary>
+        </member>
+        <member name="M:TspLibNet.NodesFactory.MakeNodes(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Create random problem with given number of nodes
+            </summary>
+            <param name="numberOfNodes">number of nodes in the proble</param>
+            <param name="width">problem space width</param>
+            <param name="height">problem space height</param>
+            <returns>Generated problem</returns>
+        </member>
+        <member name="M:TspLibNet.NodesFactory.MakeNodes(System.Int32)">
+            <summary>
+            Create random problem with given number of nodes, problem space by default is square of size 1.0 x 1.0
+            </summary>
+            <param name="numberOfNodes">number of nodes in the problem</param>
+            <returns>Generated problem</returns>
+        </member>
+        <member name="T:TspLibNet.TspLib95">
+             <summary>
+             Main class providing access to all TSP library resources.
+            
+             TspLib95 provides the entry point to TSPLIB95 instances and should be considered
+             the default starting point for any application making use of TSPLib.Net.
+            
+             This class allows you to load instances by type, in total (entire library) or individually
+             by name.  It furthermore provides access to lists of instances by type, all instances
+             in total, or individual instances by name (where name is the name of the file containing
+             the specific problem instance excluding the file extension).
+            
+             Each TSPLIB95 instance is wrapped within a <see>TspLib95Item</see> which ultimately provides
+             all the available information for the specific TSP problem it wraps. In other words, not
+             only is the TSP graph accessible (through <see>IProblem</see> and <see>ProblemBase</see>),
+             but also the best known solutions (if they exist) in the form of optimal tours and optimal tour
+             distances.
+             </summary>
+        </member>
+        <member name="P:TspLibNet.TspLib95.Items">
+            <returns>ALL loaded TSPLIB95 items or an empty list if no items have been loaded.</returns>
+        </member>
+        <member name="M:TspLibNet.TspLib95.TSPItems">
+            <returns>All symmetric TSP problem items or an empty list if no STSP items have been loaded.</returns>
+        </member>
+        <member name="M:TspLibNet.TspLib95.ATSPItems">
+            <returns>All asymmetric TSP problem items or an empty list if no ATSP items have been loaded.</returns>
+        </member>
+        <member name="M:TspLibNet.TspLib95.HCPItems">
+            <returns>All HCP problem items or an empty list if no HCP items have been loaded.</returns>
+        </member>
+        <member name="M:TspLibNet.TspLib95.SOPItems">
+            <returns>All SOP problem items or an empty list if no SOP items have been loaded.</returns>
+        </member>
+        <member name="M:TspLibNet.TspLib95.CVRPItems">
+            <returns>All CVRP problem items or an empty list if no CVRP items have been loaded.</returns>
+        </member>
+        <member name="M:TspLibNet.TspLib95.GetItemByName(System.String,TspLibNet.ProblemType)">
+            <summary>
+            </summary>
+            <param name="name">The name of the file containing the specific problem instance, excluding the file extension</param>
+            <param name="type">The specific problem type (TSP, ATSP, etc)</param>
+            <returns>The relevant TspLib95Item associated with "name" or a default item if not found</returns>
+        </member>
+        <member name="M:TspLibNet.TspLib95.#ctor(System.String)">
+            <summary>
+            Creates a new instance of the TspLib95 class.
+            </summary>
+            <param name="tspLib95Path">TSPLIB95 data library root directory path</param>
+            <exception cref="T:System.ArgumentNullException">Thrown if directory path name is null or empty</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if directory does not exist</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.ClearAll">
+            <summary>
+            Clear ALL loaded library items.
+            </summary>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadAll">
+            <summary>
+            Load ALL TSPLIB95 problem instances.
+            </summary>
+            <returns>A list of all TSPLIB95 problem items.</returns>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadAllTSP">
+            <summary>
+            Load only TSP problems
+            </summary>
+            <returns>A list of all TSP lib problem items.</returns>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadAllATSP">
+            <summary>
+            Load only ATSP problems
+            </summary>
+            <returns>A list of all ATSP lib problem items.</returns>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadAllHCP">
+            <summary>
+            Load only HCP problems
+            </summary>
+            <returns>A list of all HPC lib problem items.</returns>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadAllSOP">
+            <summary>
+            Load only SOP problems
+            </summary>
+            <returns>A list of all SOP lib problem items.</returns>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadAllCVRP">
+            <summary>
+            Load only VRP problems
+            </summary>
+            <returns>A list of all CVRP lib problem items.</returns>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadTSP(System.String)">
+            <summary>
+            Loads the TSP problem with the given name
+            </summary>
+            <param name="name">Problem name</param>
+            <seealso cref="M:TspLibNet.TspLib95.GetItemByName(System.String,TspLibNet.ProblemType)"/>
+            <exception cref="T:System.ArgumentNullException">Thrown if "name" argument is null or empty.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadATSP(System.String)">
+            <summary>
+            Loads the ATSP problem with the given name
+            </summary>
+            <param name="name">Problem name</param>
+            <seealso cref="M:TspLibNet.TspLib95.GetItemByName(System.String,TspLibNet.ProblemType)"/>
+            <exception cref="T:System.ArgumentNullException">Thrown if "name" argument is null or empty.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadHCP(System.String)">
+            <summary>
+            Loads the HCP problem with the given name
+            </summary>
+            <param name="name">Problem name</param>
+            <seealso cref="M:TspLibNet.TspLib95.GetItemByName(System.String,TspLibNet.ProblemType)"/>
+            <exception cref="T:System.ArgumentNullException">Thrown if "name" argument is null or empty.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadSOP(System.String)">
+            <summary>
+            Loads the SOP problem with the given name
+            </summary>
+            <param name="name">Problem name</param>
+            <seealso cref="M:TspLibNet.TspLib95.GetItemByName(System.String,TspLibNet.ProblemType)"/>
+            <exception cref="T:System.ArgumentNullException">Thrown if "name" argument is null or empty.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadCVRP(System.String)">
+            <summary>
+            Loads the VRP problem with the given name
+            </summary>
+            <param name="name">Problem name</param>
+            <seealso cref="M:TspLibNet.TspLib95.GetItemByName(System.String,TspLibNet.ProblemType)"/>
+            <exception cref="T:System.ArgumentNullException">Thrown if "name" argument is null or empty.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.ProblemLoader(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Generic problem loading routine
+            </summary>
+            <param name="name">problem name</param>
+            <param name="type">problem class type</param>
+            <param name="extension">problem file extension</param>
+            <param name="dir">directory with problems of such type</param>
+            <param name="solutionsFile">name of file with opt distances</param>
+            <param name="optTourExtension">extension for files with opt tours</param>
+            <returns>A list of the TspLib95Items loaded</returns>
+            <exception cref="T:System.ArgumentNullException">Thrown if "name" argument is null or empty.</exception>
+            <exception cref="T:System.IO.DirectoryNotFoundException">Thrown if TSP lib path (<seealso cref="T:TspLibNet.TspLib95"/>) does not point to TSPLIB95.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.FactorizeProblem(System.String,System.String)">
+            <summary>
+            Creates instance of a specific TSP problem
+            </summary>
+            <param name="filename">name of file with problem</param>
+            <param name="type">type of problem class</param>
+            <returns>Problem loaded from the file</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">Thrown when "type" is unknown.</exception>
+        </member>
+        <member name="M:TspLibNet.TspLib95.LoadBestSolutionsFile(System.String)">
+            <summary>
+            Loads optimal tour file
+            </summary>
+            <param name="filename">Name of file with optimal tour</param>
+            <returns>Loaded optimal tour</returns>
+        </member>
+        <member name="T:TspLibNet.TspLib95Item">
+            <summary>
+            Class represents instance of a TSP lib containing problem and it's optimal solution if available
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TspLib95Item._optimalTourDistance">
+            <summary>
+            Member caching optimal tour distance
+            </summary>
+        </member>
+        <member name="M:TspLibNet.TspLib95Item.#ctor(TspLibNet.IProblem,TspLibNet.Tours.ITour,System.Double)">
+            <summary>
+            Creates new instance of TspLib95Item class
+            </summary>
+            <param name="problem">TSP problem to be encapsulated</param>
+            <param name="optimalTour">Optimal tour of the problem</param>
+            <param name="optimalTourDistance">Optimal tour distance</param>
+        </member>
+        <member name="P:TspLibNet.TspLib95Item.Problem">
+            <summary>
+            Gets or sets problem
+            </summary>
+        </member>
+        <member name="P:TspLibNet.TspLib95Item.OptimalTour">
+            <summary>
+            Gets or sets optimal tour, null if not available
+            </summary>
+        </member>
+        <member name="P:TspLibNet.TspLib95Item.OptimalTourDistance">
+            <summary>
+            Distance of optimal tour, if not available then returns int.MaxValue
+            </summary>
+        </member>
+        <member name="M:TspLibNet.TspLib95Item.ToString">
+            <summary>
+            Gets string representation of an instance
+            </summary>
+            <returns>string representation of an instance</returns>
+        </member>
+        <member name="T:TspLibNet.TSP.TspFileDataExtractor">
+            <summary>
+            Builds graph from TSP data file
+            </summary>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.#ctor(TspLibNet.TSP.TspFile)">
+            <summary>
+            Creates a new instance of TSP file data extractor
+            </summary>
+            <param name="tspFile">tsp file to use</param>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.MakeNodeProvider">
+            <summary>
+            Makes a node provider
+            </summary>
+            <returns>node provider</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.MakeEdgeProvider(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Makes an edge provider
+            </summary>
+            <param name="nodes">current set of nodes</param>
+            <returns>edge provider</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.MakeEdgeWeightsProvider">
+            <summary>
+            Makes an edge weights provider
+            </summary>
+            <returns>edge weights provider</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.MakeFixedEdgesProvider(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Makes a fixed edges provider
+            </summary>
+            <param name="nodes">current set of nodes</param>
+            <returns>fixed edges</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.MakeDepotsProvider(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Makes depots provider
+            </summary>
+            <param name="nodes">current set of nodes</param>
+            <returns>depots provider</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.MakeDemandProvider(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Makes demands porivee
+            </summary>
+            <param name="nodes">current set of nodes</param>
+            <returns>demands porivee</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.LoadDepots(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Loads nodes that are depots
+            </summary>
+            <param name="nodes">all nodes in graph</param>
+            <returns>Nodes that are depots</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.LoadDemands(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Loads demands for graph nodes
+            </summary>
+            <param name="nodes">all nodes in graph</param>
+            <returns>demands for graph nodes</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.LoadEdges(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Build edges given in tsp file
+            </summary>
+            <param name="nodes">graph nodes</param>
+            <returns>List of edges</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.LoadFixedEdges(System.Collections.Generic.IEnumerable{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Build fixed edges given in tsp file
+            </summary>
+            <param name="nodes">graph nodes</param>
+            <returns>List of fixed edges</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.LoadWeightMatrix">
+            <summary>
+            Loads weight matrix from tsp data
+            </summary>
+            <returns>Edge weight matrix</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.LoadDistanceFunction">
+            <summary>
+            Loads distance function
+            </summary>
+            <returns>Loaded distance function</returns>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileDataExtractor.LookupIntArrayList(System.Collections.Generic.List{System.Int32[]},System.Int32)">
+            <summary>
+            Lookups list of int arrays
+            </summary>
+            <param name="data">data to check</param>
+            <param name="key">key to look up</param>
+            <returns>found value or 0</returns>
+        </member>
+        <member name="T:TspLibNet.TSP.Defines.DisplayDataType">
+            <summary>
+            Specifies how a graphical display of the nodes can be obtained
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.DisplayDataType.Undefined">
+            <summary>
+            Data display is not defined
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.DisplayDataType.Coordinates">
+            <summary>
+            Display is generated from the node coordinates (is default when coordinates are specified)
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.DisplayDataType.Display2D">
+            <summary>
+            Explicit coordinates in 2D are given
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.DisplayDataType.NoDisplay">
+            <summary>
+            No graphical display is possible (is default when coordinates are not specified)
+            </summary>
+        </member>
+        <member name="T:TspLibNet.TSP.Defines.EdgeDataFormat">
+            <summary>
+            Format of edges of a graph
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeDataFormat.Undefined">
+            <summary>
+            Format is not defined
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeDataFormat.EdgeList">
+            <summary>
+            The graph is given by an edge list
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeDataFormat.AdjacencyList">
+            <summary>
+            The graph is given as an adjacency list
+            </summary>
+        </member>
+        <member name="T:TspLibNet.TSP.Defines.EdgeWeightFormat">
+            <summary>
+            Format of eplicitly specified edge weights 
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.Undefined">
+            <summary>
+            Format is not defined
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.Function">
+            <summary>
+            Weights are given by function
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.FullMatrix">
+            <summary>
+            Weights are given by a full matrix
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.UpperRow">
+            <summary>
+            Upper triangular matrix, row-wise without diagonal entries
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.LowerRow">
+            <summary>
+            Lower triangular matrix, row-wise without diagonal entries
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.UpperDiagonalRow">
+            <summary>
+            Upper triangular matrix, row-wise including diagonal entries
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.LowerDiagonalRow">
+            <summary>
+            Lower triangular matrix, row-wise including diagonal entries
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.UpperColumn">
+            <summary>
+            Upper triangular matrix, column-wise without diagonal entries
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.LowerColumn">
+            <summary>
+            Lower triangular matrix, column-wise without diagonal entries
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.UpperDiagonalColumn">
+            <summary>
+            Upper triangular matrix, column-wise including diagonal entries
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightFormat.LowerDiagonalColumn">
+            <summary>
+            Lower triangular matrix, column-wise including diagonal entries
+            </summary>
+        </member>
+        <member name="T:TspLibNet.TSP.Defines.EdgeWeightType">
+            <summary>
+            Enumerates types of edge weights
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Undefined">
+            <summary>
+            Undefined edge weight type
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Explicit">
+            <summary>
+            Weights are listed explicitly
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Euclidean2D">
+            <summary>
+            Weights are Euclidean distances in 2D space
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.EuclideanCeiled2D">
+            <summary>
+            Weights are Euclidean distances in 2D space rounded up
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Euclidean3D">
+            <summary>
+            Weights are Euclidean distances in 3D space
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Maximum2D">
+            <summary>
+            Weights are maximum distances in 2D space
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Maximum3D">
+            <summary>
+            Weights are maximum distances in 3D space
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Manhattan2D">
+            <summary>
+            Weights are Manhattan distances in 2D space
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Manhattan3D">
+            <summary>
+            Weights are Manhattan distances in 3D space
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Geographical">
+            <summary>
+            Weights are geographical distances
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.PseudoEuclidean">
+            <summary>
+            Special distance function for problems att48 and att532
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.XRay1">
+            <summary>
+            Special distance function for crystallography problems ver 1
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.XRay2">
+            <summary>
+            Special distance function for crystallography problems ver 2
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.EdgeWeightType.Special">
+            <summary>
+            There is a pecial distance function documented elsewhere
+            </summary>
+        </member>
+        <member name="T:TspLibNet.TSP.Defines.FileType">
+            <summary>
+            Enumerates type of data in TSP files
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.FileType.Undefined">
+            <summary>
+            File type is undefined
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.FileType.TSP">
+            <summary>
+            Data for symmetric traveling salesman problem
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.FileType.ATSP">
+            <summary>
+            Data for asymmetric traveling salesman problem
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.FileType.SOP">
+            <summary>
+            Data for sequential ordering problem
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.FileType.HCP">
+            <summary>
+            Data for hamiltonian cycle problem
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.FileType.CVRP">
+            <summary>
+            Data for capacitated vehicle routing problem
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.FileType.TOUR">
+            <summary>
+            File with a tour
+            </summary>
+        </member>
+        <member name="T:TspLibNet.TSP.Defines.NodeCoordinatesType">
+            <summary>
+            Type of node coordinates
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.NodeCoordinatesType.Undefined">
+            <summary>
+            Node cooridantes type is undefined
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.NodeCoordinatesType.NoCoordinates">
+            <summary>
+            No coordinates are specified
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.NodeCoordinatesType.Coordinates2D">
+            <summary>
+            Coordinates are in 2D
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.Defines.NodeCoordinatesType.Coordinates3D">
+            <summary>
+            Coordinates are in 3D
+            </summary>
+        </member>
+        <member name="T:TspLibNet.TSP.TspFile">
+            <summary>
+            Represents TSP file
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Name">
+            <summary>
+            Gets file name - Identifies the data file.
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Type">
+            <summary>
+            Gets type of file - specifies the type of the data
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Comment">
+            <summary>
+            Gets file comment - additional comments from problem author
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Dimension">
+            <summary>
+            Gets problem dimension, for TSP and ATSP is a number of nodes. For CVRP total number of nodes and depots. For tour it is a dimension of coresponding problem.
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Capacity">
+            <summary>
+            Gets truck capacity in a CVRP
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.EdgeWeightType">
+            <summary>
+            Gets how edge weights (or distances) are given
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.EdgeWeightFormat">
+            <summary>
+            Describes format of the edge weights if are given explicitly
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.EdgeDataFormat">
+            <summary>
+            Describes the format in which the edges of a grap are given, if the graph is not complete
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.NodeCoordinatesType">
+            <summary>
+            Specifies whether coordinates are associated with each node
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.DisplayDataType">
+            <summary>
+            How graphical display of nodes can be obtained
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Nodes">
+            <summary>
+            Gets nodes coordinates
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Depots">
+            <summary>
+            Gets list of alternate depots
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Demands">
+            <summary>
+            The demands of all nodes of CVRP, first is node, second is it's demand. Depot nodes have demands = 0.
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Edges">
+            <summary>
+            List of edges or list of adjacency lists for nodes
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.FixedEdges">
+            <summary>
+            List of edges required to appear in each solution to the problem
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.DisplayNodes">
+            <summary>
+            Display nodes data
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.Tour">
+            <summary>
+            Gets optimal tour
+            </summary>
+        </member>
+        <member name="F:TspLibNet.TSP.TspFile.EdgeWeights">
+            <summary>
+            Matrix of edge weights
+            </summary>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFile.Load(System.String)">
+            <summary>
+            Loads TSP file
+            </summary>
+            <param name="fileName">file to load</param>
+            <returns>Loaed tsp file</returns>
+        </member>
+        <member name="T:TspLibNet.TSP.TspFileLoader">
+            <summary>
+            Loads TSP files
+            </summary>
+        </member>
+        <member name="M:TspLibNet.TSP.TspFileLoader.Load(System.IO.StreamReader)">
+            <summary>
+            Loads TSP File structure from a stream
+            </summary>
+            <param name="reader">stream reader</param>
+            <returns>TSP File structure loaded from a stream</returns>
+        </member>
+        <member name="T:TspLibNet.CapacitatedVehicleRoutingProblem">
+            <summary>
+            Capacitated Vehicle Routing Problem
+            </summary>
+        </member>
+        <member name="M:TspLibNet.CapacitatedVehicleRoutingProblem.#ctor(System.String,System.String,TspLibNet.Graph.Nodes.INodeProvider,TspLibNet.Graph.Edges.IEdgeProvider,TspLibNet.Graph.EdgeWeights.IEdgeWeightsProvider,TspLibNet.Graph.FixedEdges.IFixedEdgesProvider,TspLibNet.Graph.Depots.IDepotsProvider,TspLibNet.Graph.Demand.IDemandProvider)">
+            <summary>
+            Creates new instance of CapacitatedVehicleRoutingProblem class
+            </summary>
+            <param name="name">problem name</param>
+            <param name="comment">comment on problem from the author</param>
+            <param name="nodeProvider">provider of nodes</param>
+            <param name="edgeProvider">provider of edges</param>
+            <param name="edgeWeightsProvider">provider of edge weights</param>
+            <param name="fixedEdgesProvider">provider of fixed edges</param>
+            <param name="depotsProvider">provider of depot nodes</param>
+            <param name="demandProvider">provider of demands on nodes</param>
+        </member>
+        <member name="M:TspLibNet.CapacitatedVehicleRoutingProblem.FromFile(System.String)">
+            <summary>
+            Load problem from TSP file
+            </summary>
+            <param name="fileName">name of the file</param>
+            <returns>Loaded problem</returns>
+        </member>
+        <member name="P:TspLibNet.CapacitatedVehicleRoutingProblem.DepotsProvider">
+            <summary>
+            Gets depots provider
+            </summary>
+        </member>
+        <member name="P:TspLibNet.CapacitatedVehicleRoutingProblem.DemandProvider">
+            <summary>
+            Gets demand provider
+            </summary>
+        </member>
+        <member name="M:TspLibNet.CapacitatedVehicleRoutingProblem.TourDistance(TspLibNet.Tours.ITour)">
+            <summary>
+            Gets tour distance for a given problem
+            </summary>
+            <param name="tour">Tour to check</param>
+            <returns>Tour distance</returns>
+        </member>
+        <member name="M:TspLibNet.CapacitatedVehicleRoutingProblem.ValidateTour(TspLibNet.Tours.ITour)">
+            <summary>
+            Validate given solution
+            </summary>
+            <param name="tour">Tour to check</param>
+        </member>
+        <member name="M:TspLibNet.CapacitatedVehicleRoutingProblem.FromTspFile(TspLibNet.TSP.TspFile)">
+            <summary>
+            Load problem from TSP file
+            </summary>
+            <param name="tspFile">TSP file instance</param>
+            <returns>Loaded problem</returns>
+        </member>
+        <member name="T:TspLibNet.HamiltonianCycleProblem">
+            <summary>
+            Hamiltonian Cycle Problem
+            This problem purpose is to find out if there is a Hamiltonian path in a graph.
+            To do so we have edges with weight of one on all adjacent graph nodes and rest of edges have weight greater than one.
+            Hamiltonian path on existing edges will exist if the minimal tour distance will be made only from edges with weight of one...
+            so the total distance of the tour will be number of nodes.
+            </summary>
+        </member>
+        <member name="M:TspLibNet.HamiltonianCycleProblem.#ctor(System.String,System.String,TspLibNet.Graph.Nodes.INodeProvider,TspLibNet.Graph.Edges.IEdgeProvider,TspLibNet.Graph.EdgeWeights.IEdgeWeightsProvider,TspLibNet.Graph.FixedEdges.IFixedEdgesProvider)">
+            <summary>
+            Creates new instance of HamiltonianCycleProblem class
+            </summary>
+            <param name="name">problem name</param>
+            <param name="comment">comment on problem from the author</param>
+            <param name="nodeProvider">provider of nodes</param>
+            <param name="edgeProvider">provider of edges</param>
+            <param name="edgeWeightsProvider">provider of edge weights</param>
+            <param name="fixedEdgesProvider">provider of fixed edges</param>
+        </member>
+        <member name="M:TspLibNet.HamiltonianCycleProblem.FromFile(System.String)">
+            <summary>
+            Load problem from TSP file
+            </summary>
+            <param name="fileName">name of the file</param>
+            <returns>Loaded problem</returns>
+        </member>
+        <member name="P:TspLibNet.HamiltonianCycleProblem.OptimalTourDistance">
+            <summary>
+            Gets distance of optimal tour for HCP
+            </summary>
+        </member>
+        <member name="M:TspLibNet.HamiltonianCycleProblem.TourDistance(TspLibNet.Tours.ITour)">
+            <summary>
+            Gets tour distance for a given problem
+            </summary>
+            <param name="tour">Tour to check</param>
+            <returns>Tour distance</returns>
+        </member>
+        <member name="M:TspLibNet.HamiltonianCycleProblem.ValidateTour(TspLibNet.Tours.ITour)">
+            <summary>
+            Validate given solution
+            </summary>
+            <param name="tour">Tour to check</param>
+        </member>
+        <member name="M:TspLibNet.HamiltonianCycleProblem.FromTspFile(TspLibNet.TSP.TspFile)">
+            <summary>
+            Load problem from TSP file
+            </summary>
+            <param name="tspFile">TSP file instance</param>
+            <returns>Loaded problem</returns>
+        </member>
+        <member name="T:TspLibNet.ProblemBase">
+            <summary>
+            Problem base class
+            </summary>
+        </member>
+        <member name="M:TspLibNet.ProblemBase.#ctor(System.String,System.String,TspLibNet.ProblemType,TspLibNet.Graph.Nodes.INodeProvider,TspLibNet.Graph.Edges.IEdgeProvider,TspLibNet.Graph.EdgeWeights.IEdgeWeightsProvider,TspLibNet.Graph.FixedEdges.IFixedEdgesProvider)">
+            <summary>
+            Creates new instance of ProblemBase class
+            </summary>
+            <param name="name">Problem name</param>
+            <param name="comment">Comment on problem</param>
+            <param name="type">The problem type (TSP, ATSP, etc)</param>
+            <param name="nodeProvider">Provider of graph nodes</param>
+            <param name="edgeProvider">Provider of graph edges</param>
+            <param name="edgeWeightsProvider">Provider of edge weights</param>
+            <param name="fixedEdgesProvider">Provider of solution fixed edges</param>
+        </member>
+        <member name="P:TspLibNet.ProblemBase.Type">
+            <summary>
+            Represents the problem type (TSP, ATSP, etc).
+            </summary>
+        </member>
+        <member name="P:TspLibNet.ProblemBase.Name">
+            <summary>
+            Gets file name - Identifies the data file.
+            </summary>
+        </member>
+        <member name="P:TspLibNet.ProblemBase.Comment">
+            <summary>
+            Gets file comment - additional comments from problem author
+            </summary>
+        </member>
+        <member name="P:TspLibNet.ProblemBase.NodeProvider">
+            <summary>
+            Gets nodes provider
+            </summary>
+        </member>
+        <member name="P:TspLibNet.ProblemBase.EdgeProvider">
+            <summary>
+            Gets Edges provider
+            </summary>
+        </member>
+        <member name="P:TspLibNet.ProblemBase.EdgeWeightsProvider">
+            <summary>
+            Gets Edge Weights Provider
+            </summary>
+        </member>
+        <member name="P:TspLibNet.ProblemBase.FixedEdgesProvider">
+            <summary>
+            Gets Fixed Edges Provider
+            </summary>
+        </member>
+        <member name="M:TspLibNet.ProblemBase.TourDistance(TspLibNet.Tours.ITour)">
+            <summary>
+            Gets tour distance for a given problem
+            </summary>
+            <param name="tour">Tour to check</param>
+            <returns>Tour distance</returns>
+        </member>
+        <member name="T:TspLibNet.SequentialOrderingProblem">
+            <summary>
+            Sequential Ordering Problem
+            </summary>
+        </member>
+        <member name="M:TspLibNet.SequentialOrderingProblem.#ctor(System.String,System.String,TspLibNet.Graph.Nodes.INodeProvider,TspLibNet.Graph.Edges.IEdgeProvider,TspLibNet.Graph.EdgeWeights.IEdgeWeightsProvider,TspLibNet.Graph.FixedEdges.IFixedEdgesProvider)">
+            <summary>
+            Creates new instance of SequentialOrderingProblem class
+            </summary>
+            <param name="name">problem name</param>
+            <param name="comment">comment on problem from the author</param>
+            <param name="nodeProvider">provider of nodes</param>
+            <param name="edgeProvider">provider of edges</param>
+            <param name="edgeWeightsProvider">provider of edge weights</param>
+            <param name="fixedEdgesProvider">provider of fixed edges</param>
+        </member>
+        <member name="M:TspLibNet.SequentialOrderingProblem.FromFile(System.String)">
+            <summary>
+            Load problem from TSP file
+            </summary>
+            <param name="fileName">name of the file</param>
+            <returns>Loaded problem</returns>
+        </member>
+        <member name="M:TspLibNet.SequentialOrderingProblem.TourDistance(TspLibNet.Tours.ITour)">
+            <summary>
+            Gets tour distance for a given problem
+            </summary>
+            <param name="tour">Tour to check</param>
+            <returns>Tour distance</returns>
+        </member>
+        <member name="M:TspLibNet.SequentialOrderingProblem.ValidateTour(TspLibNet.Tours.ITour)">
+            <summary>
+            Validate given solution
+            </summary>
+            <param name="tour">Tour to check</param>
+        </member>
+        <member name="M:TspLibNet.SequentialOrderingProblem.FromTspFile(TspLibNet.TSP.TspFile)">
+            <summary>
+            Load problem from TSP file
+            </summary>
+            <param name="tspFile">TSP file instance</param>
+            <returns>Loaded problem</returns>
+        </member>
+        <member name="T:TspLibNet.TravelingSalesmanProblem">
+             <summary>
+             Traveling Salesman Problem
+            
+             This class represents both symmetric and asymmetric Traveling Salesman Problems:
+            
+             "Given a set of n nodes and distances for each pair of nodes, find a roundtrip of minimal total length
+             visiting each node exactly once."
+            
+             For the symmetric TSP, the distance from node i to node j is the same as from node j to node i.
+             For asymmetric TSP, the distance from node i to node j and the distance from node j to node i may be different.
+             </summary>
+        </member>
+        <member name="M:TspLibNet.TravelingSalesmanProblem.#ctor(System.String,System.String,TspLibNet.ProblemType,TspLibNet.Graph.Nodes.INodeProvider,TspLibNet.Graph.Edges.IEdgeProvider,TspLibNet.Graph.EdgeWeights.IEdgeWeightsProvider,TspLibNet.Graph.FixedEdges.IFixedEdgesProvider)">
+            <summary>
+            Creates new instance of TravelingSalesmanProblem class
+            </summary>
+            <param name="name">problem name</param>
+            <param name="comment">comment on problem from the author</param>
+            <param name="type">TSP or ATSP</param>
+            <param name="nodeProvider">provider of nodes</param>
+            <param name="edgeProvider">provider of edges</param>
+            <param name="edgeWeightsProvider">provider of edge weights</param>
+            <param name="fixedEdgesProvider">provider of fixed edges</param>
+        </member>
+        <member name="M:TspLibNet.TravelingSalesmanProblem.FromFile(System.String)">
+            <summary>
+            Load problem from TSP file
+            </summary>
+            <param name="fileName">name of the file</param>
+            <returns>Loaded problem</returns>
+        </member>
+        <member name="M:TspLibNet.TravelingSalesmanProblem.FromNodes(System.Collections.Generic.List{TspLibNet.Graph.Nodes.INode})">
+            <summary>
+            Create problem from list of nodes
+            </summary>
+            <param name="nodes">list of nodes defining TSP problem instance</param>
+            <returns>Generated TSP problem</returns>
+        </member>
+        <member name="M:TspLibNet.TravelingSalesmanProblem.TourDistance(TspLibNet.Tours.ITour)">
+            <summary>
+            Gets tour distance for a given problem
+            </summary>
+            <param name="tour">Tour to check</param>
+            <returns>Tour distance</returns>
+        </member>
+        <member name="M:TspLibNet.TravelingSalesmanProblem.ValidateTour(TspLibNet.Tours.ITour)">
+            <summary>
+            Validate given solution
+            </summary>
+            <param name="tour">Tour to check</param>
+        </member>
+        <member name="M:TspLibNet.TravelingSalesmanProblem.FromTspFile(TspLibNet.TSP.TspFile)">
+            <summary>
+            Load problem from TSP file
+            </summary>
+            <param name="tspFile">TSP file instance</param>
+            <returns>Loaded problem</returns>
+        </member>
+        <member name="T:TspLibNet.Tours.ITour">
+            <summary>
+            Tour interface represents problem solution as a sequence of nodes to visit
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Tours.ITour.Name">
+            <summary>
+            Gets file name - Identifies the data file.
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Tours.ITour.Comment">
+            <summary>
+            Gets file comment - additional comments from problem author
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Tours.ITour.Dimension">
+            <summary>
+            Gets problem dimension
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Tours.ITour.Nodes">
+            <summary>
+            Gets list of node id's to visit
+            </summary>
+        </member>
+        <member name="T:TspLibNet.Tours.Tour">
+            <summary>
+            Tour class represents problem solution as a sequence of nodes to visit
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Tours.Tour.#ctor(System.String,System.String,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})">
+            <summary>
+            Create new instance of Tour class.
+            </summary>
+            <param name="name">file name which identifies the data file</param>
+            <param name="comment">additional comments from problem author</param>
+            <param name="dimension">problem dimension</param>
+            <param name="nodes">tour nodes</param>
+        </member>
+        <member name="P:TspLibNet.Tours.Tour.Name">
+            <summary>
+            Gets file name - Identifies the data file.
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Tours.Tour.Comment">
+            <summary>
+            Gets file comment - additional comments from problem author
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Tours.Tour.Dimension">
+            <summary>
+            Gets problem dimension
+            </summary>
+        </member>
+        <member name="P:TspLibNet.Tours.Tour.Nodes">
+            <summary>
+            Gets list of node id's to visit
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Tours.Tour.FromTspFile(TspLibNet.TSP.TspFile)">
+            <summary>
+            Create tour from TSP file
+            </summary>
+            <param name="tspFile">tsp file to load from</param>
+            <returns>Tour read from tsp file</returns>
+        </member>
+        <member name="M:TspLibNet.Tours.Tour.FromFile(System.String)">
+            <summary>
+            Load tour from TSP file
+            </summary>
+            <param name="fileName">name of the file</param>
+            <returns>Loaded tour</returns>
+        </member>
+        <member name="T:TspLibNet.Extensions.MathExtensions">
+            <summary>
+            Math extensions
+            </summary>
+        </member>
+        <member name="M:TspLibNet.Extensions.MathExtensions.NearestInt(System.Double)">
+            <summary>
+            Nearest integral value function
+            </summary>
+            <param name="d">input value</param>
+            <returns>nearest integral value</returns>
+        </member>
+        <member name="M:TspLibNet.Extensions.MathExtensions.Max(System.Double,System.Double,System.Double)">
+            <summary>
+            Max value of of three
+            </summary>
+            <param name="value1">first value</param>
+            <param name="value2">second value</param>
+            <param name="value3">third value</param>
+            <returns>Max value of specified three</returns>
+        </member>
+    </members>
+</doc>
